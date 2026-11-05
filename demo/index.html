@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מנתב פניות הציבור</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="כתבו במילים שלכם במה מדובר, ונפנה אתכם לערוץ הנכון: נציבות הבנק, הפיקוח על הבנקים, מסלול דחוף או גוף אחר.">
+<link rel="stylesheet" href="router.css">
+<script src="router.js" defer></script>
+</head>
+<body>
+<noscript><p class="noscript">לשימוש במנתב יש לאפשר JavaScript. אפשר לפנות ישירות ל<a href="https://www.boi.org.il/information/public-enquiries-unit/">יחידה לפניות הציבור ולבקרה צרכנית</a>.</p></noscript>
+<div class="app">
+  <div class="proto"><div class="wrap">
+    <span><b>אב־טיפוס להצגה פנימית</b></span>
+    <span>לא אתר רשמי של בנק ישראל</span>
+    <span>הטקסט נסרק בדפדפן ולא נשלח לשום מקום</span>
+  </div></div>
+
+  <div class="headband"><header class="wrap head">
+    <div class="head-row">
+      <div>
+        <p class="kicker">פניות הציבור ובקרה צרכנית</p>
+        <h1>מנתב פניות הציבור</h1>
+        <p class="sub">כותבים במילים שלכם במה מדובר. הסורק מזהה את סוג הפנייה לפי מילות מפתח ומנתב לערוץ הנכון. כשאין מספיק מילים לזיהוי, הפנייה עוברת לערוץ הכללי של היחידה.</p>
+      </div>
+      <div class="head-actions">
+        <button id="presenter" class="pill switch" type="button" aria-pressed="false"><span class="knob" aria-hidden="true"></span>מצב הצגה</button>
+        <button id="reset" class="pill" type="button">שיחה חדשה</button>
+      </div>
+    </div>
+  </header></div>
+
+  <main class="wrap">
+    <section id="lab" class="lab" hidden>
+      <h2>מאחורי הצ׳אט</h2>
+      <p>כל מילת מפתח מוסיפה ניקוד לסוג פנייה, או מסמנת מצב: דחיפות, הליך משפטי, השלב מול נציבות התאגיד, הזמן שעבר ושם התאגיד. הסוג עם הניקוד הגבוה קובע את הערוץ. כשהניקוד נמוך מ־2, הפנייה עוברת לערוץ הכללי של היחידה (מסלול 00). כשחסר פרט אחד, כמו השלב מול הנציבות, הצ׳אט שואל עליו, ואחרי שתי תשובות לא ברורות מפנה לערוץ הכללי. אין שרת, אין מודל שפה, והטקסט לא נשמר.</p>
+      <p>בכל ניתוב מוצגים הניקוד, הסימונים בטקסט ופלט מובנה של הפנייה, שאפשר למפות לשדות במערכת ניהול הפניות.</p>
+      <details><summary>מילון מילות המפתח</summary><div id="lex" class="lex"></div></details>
+      <details><summary>כל 19 היעדים</summary><div id="map-list" class="map-list"></div></details>
+    </section>
+
+    <section id="log" class="chat" aria-live="polite"></section>
+
+    <div class="composer">
+      <form id="composer">
+        <label for="msg-input" class="visually-hidden">תיאור הפנייה</label>
+        <textarea id="msg-input" rows="1" placeholder="למשל: הבנק חייב אותי בעמלה ופניתי לנציבות שלו לפני חודשיים…"></textarea>
+        <button class="send" type="submit">שליחה</button>
+      </form>
+      <p class="fine">הטקסט לא נשמר ולא נשלח. אין צורך במספר תעודת זהות או בפרטי חשבון.</p>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <p>אב־טיפוס. הערוצים, התנאים ופרטי הנציבויות נלקחו מדפי היחידה לפניות הציבור ולבקרה צרכנית באתר בנק ישראל, נובמבר 2026, ויש לאמת אותם לפני שימוש רשמי.</p>
+        <p><a href="https://www.boi.org.il/information/public-enquiries-unit/" target="_blank" rel="noopener">דף היחידה לפניות הציבור</a> · <a href="https://www.boi.org.il/information/public-enquiries-unit/ihaveaq/" target="_blank" rel="noopener">טבלת נציבויות התאגידים</a> · <a href="https://boi.org.il/media/ibtjb5yb/202506.pdf" target="_blank" rel="noopener">אמנת השירות של היחידה</a></p>
+  </footer>
+</div>
+</body>
+</html>
