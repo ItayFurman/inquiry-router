@@ -43,12 +43,12 @@ const BANKS = [
   { s: 'דיסקונט', n: 'בנק דיסקונט', phone: '076-8056566', form: 'https://www.discountbank.co.il/DB/private/general-information/help/contact-us', addr: 'הרצל 156, תל אביב', a: ['דיסקונט$'] },
   { s: 'הבינלאומי', n: 'הבנק הבינלאומי (כולל יובנק, אוצר החייל ופאג״י)', phone: '03-5138700', email: 'FibiPniyot@fibi.co.il', form: 'https://apps.fibi.co.il/kpatz/index.aspx?bid=31', addr: 'הרצל 63, רמלה 7240631', a: ['בינלאומי', 'יובנק', 'אוצר החייל', 'פאגי$', 'פאג"י'] },
   { s: 'מסד', n: 'בנק מסד', phone: '03-5641347', email: 'pniyot@bankmassad.co.il', form: 'https://apps.fibi.co.il/kpatz/index.aspx?bid=46', addr: 'אבא הלל 12, רמת גן 5250606', a: ['בנק מסד', 'מסד$'] },
-  { s: 'יהב', n: 'בנק יהב', phone: '02-5009956', email: 'pniyot-tzibur@yahav.co.il', form: 'https://www.bank-yahav.co.il/public-inquiries/', addr: 'ירמיהו 80, בית יהב, ירושלים', a: ['יהב$'] },
-  { s: 'ירושלים', n: 'בנק ירושלים', phone: '*5727', form: 'https://www.bankjerusalem.co.il/support/ombudsman-department', addr: 'הנגב 2, ת״ד 1076, קריית שדה התעופה', a: ['בנק ירושלים'] },
+  { s: 'יהב', n: 'בנק יהב', phone: '02-5009956', note: 'מענה טלפוני: א׳–ה׳, 8:30–15:00.', email: 'pniyot-tzibur@yahav.co.il', form: 'https://www.bank-yahav.co.il/public-inquiries/', addr: 'ירמיהו 80, בית יהב, ירושלים', a: ['יהב$'] },
+  { s: 'ירושלים', n: 'בנק ירושלים', phone: '*5727', note: 'הטלפון משמש לבירור מצב תלונה בלבד (א׳–ה׳, 9:00–14:00). את התלונה מגישים בטופס המקוון.', form: 'https://www.bankjerusalem.co.il/support/ombudsman-department', addr: 'הנגב 2, ת״ד 1076, קריית שדה התעופה', a: ['בנק ירושלים'] },
   { s: 'מרכנתיל', n: 'בנק מרכנתיל דיסקונט', phone: '076-8044151', email: 'pniotz@mdb.co.il', note: 'אין טופס מקוון. הפנייה נשלחת בדוא״ל.', addr: 'דרך מנחם בגין 125, תל אביב 6701201', a: ['מרכנתיל'] },
   { s: 'ONE ZERO', n: 'ONE ZERO הבנק הדיגיטלי', form: 'https://www.onezerobank.com/PublicInquiries', addr: 'עמינדב 3, קומה 1, תל אביב 6706703', a: ['one zero', 'onezero', 'וואן זירו', 'וואנזירו'] },
   { s: 'ישראכרט', n: 'ישראכרט', phone: '03-6364330', email: 'pniot@isracard.co.il', form: 'https://digital.isracard.co.il/wiz/front/m/98ZJR484DM', addr: 'בר כוכבא 12, בני ברק 5126105', a: ['ישראכרט', 'isracard', 'אמריקן אקספרס', 'אמקס$'] },
-  { s: 'כאל', n: 'כאל (כולל דיינרס)', phone: '03-5723524', form: 'https://onlineforms.cal-online.co.il/index.html?token=&formId=147&systemId=3', addr: 'תפוצות ישראל 13, גבעתיים', a: ['כאל$', 'כ.א.ל', 'cal$', 'דיינרס', 'כרטיסי אשראי לישראל'] },
+  { s: 'כאל', n: 'כאל (כולל דיינרס)', form: 'https://onlineforms.cal-online.co.il/index.html?token=&formId=147&systemId=3', addr: 'תפוצות ישראל 13, גבעתיים', a: ['כאל$', 'כ.א.ל', 'cal$', 'דיינרס', 'כרטיסי אשראי לישראל'] },
   { s: 'מקס', n: 'מקס', phone: '03-6178631', form: 'https://online.max.co.il/Anonymous/publicinquiries.aspx?SourceGA=contact-us', addr: 'בן גוריון 9, בני ברק', a: ['מקס$', 'max$', 'לאומי קארד'] }
 ];
 
