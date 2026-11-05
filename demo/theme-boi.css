@@ -1,0 +1,106 @@
+/* =====================================================================
+   ערכת עיצוב לאתר בנק ישראל
+   נטענת אחרי router.css ודורסת אותו. הערכים נלקחו ממערכת העיצוב של
+   boi.org.il (משתני ה־CSS של האתר ומדידת רכיבים בדף "פניות הציבור ובקרה צרכנית"),
+   נובמבר 2026.
+
+   לשימוש רק כשהרכיב מתארח בדומיין של בנק ישראל. הגופנים נטענים מהנתיבים
+   של האתר עצמו (/css/fonts/...), ואין להעתיק את קבצי הגופנים למקום אחר.
+   ===================================================================== */
+
+@font-face { font-family: almoni; font-weight: 300; font-display: swap; src: url("/css/fonts/almoni/almoni-light-aaa.woff2") format("woff2"), url("/css/fonts/almoni/almoni-light-aaa.woff") format("woff"); }
+@font-face { font-family: almoni; font-weight: 400; font-display: swap; src: url("/css/fonts/almoni/almoni-regular-aaa.woff2") format("woff2"), url("/css/fonts/almoni/almoni-regular-aaa.woff") format("woff"); }
+@font-face { font-family: almoni; font-weight: 700; font-display: swap; src: url("/css/fonts/almoni/almoni-bold-aaa.woff2") format("woff2"), url("/css/fonts/almoni/almoni-bold-aaa.woff") format("woff"); }
+@font-face { font-family: mikhmoret; font-weight: 700; font-display: swap; src: url("/css/fonts/mikhmoret/mikhmoret-bold-aaa.woff2") format("woff2"), url("/css/fonts/mikhmoret/mikhmoret-bold-aaa.woff") format("woff"); }
+
+:root {
+  /* משתני האתר (boi.org.il :root) */
+  --boi-text: #2e3d50;            /* --bs-body-color */
+  --boi-text-light: #676f7e;      /* --bs-body-color-light */
+  --boi-page: #f8f8f8;            /* --bs-body-bg */
+  --boi-azure: #e9f2f5;           /* --bs-body-bg-azure: רקע כרטיסים ואייקונים */
+  --boi-light: #ebf3f5;           /* --light-color */
+  --boi-primary: #1a8fa4;         /* --primary-color */
+  --boi-primary-dark: #197888;    /* --primary-color-dark */
+  --boi-primary-darker: #13526d;  /* --primary-color-darker */
+  --boi-primary-light: #25a0b6;   /* --primary-color-light: פס הכותרת של הדף */
+  --boi-primary-lighter: #66d1e3; /* --primary-color-lighter */
+  --boi-gray-light: #b8c4d5;      /* --gray-color-light: קו התחתית של כותרת האתר */
+  --boi-gray-dark: #3e5268;       /* --gray-color-dark */
+  --boi-rule: #ccdadf;
+  --boi-green: #228435;           /* --green-color */
+  --boi-error: #aa4669;           /* --errors-color */
+  --boi-radius: 3.6px;            /* רדיוס הכפתורים באתר */
+
+  /* מיפוי לטוקנים של הרכיב */
+  --bg: var(--boi-page);
+  --surface: #ffffff;
+  --ink: var(--boi-text);
+  --muted: var(--boi-text-light);
+  --line: var(--boi-rule);
+  --navy: var(--boi-text);
+  --accent: var(--boi-primary);
+  --accent-ink: #ffffff;
+  --accent-soft: var(--boi-azure);
+  --wait: #7a5a00;
+  --wait-soft: #fbf3dc;
+  --stop: var(--boi-error);
+  --stop-soft: #f7e8ee;
+  --out: var(--boi-gray-dark);
+  --out-soft: var(--boi-light);
+  --hl-bg: #fbe7a8;
+  --hl2-bg: #cfe9ef;
+  --hl-ink: var(--boi-text);
+  --f-body: almoni, tajawal, "Arial Hebrew", Arial, sans-serif;
+  --f-display: mikhmoret, almoni, "Arial Hebrew", Arial, sans-serif;
+  color-scheme: light;
+}
+
+body { font-size: 18px; line-height: 1.5; }
+
+/* פס כותרת: כמו כותרת הדף באתר (פס טורקיז, כותרת לבנה בגופן mikhmoret) */
+.headband { background: var(--boi-primary-light); border-bottom: 0; }
+.head { padding-block: 26px 28px; }
+.kicker { color: #ffffff; font-size: 14.4px; font-weight: 300; margin-bottom: 6px; }
+h1 { font-family: var(--f-display); font-weight: 800; color: #ffffff; font-size: clamp(30px, 5vw, 40.5px); line-height: 1.2; }
+.sub { color: #ffffff; }
+.pill { background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, .75); border-radius: var(--boi-radius); font-weight: 400; }
+.pill:hover { background: rgba(255, 255, 255, .12); color: #ffffff; border-color: #ffffff; }
+.switch[aria-pressed="true"] .knob { background: var(--boi-primary-darker); }
+
+/* שיחה: בלוקים לבנים על רקע אפור, פינות כמעט ישרות */
+.bubble { border-radius: var(--boi-radius); }
+.user .bubble { background: var(--boi-text); border-end-end-radius: var(--boi-radius); }
+.bot .bubble { border: 0; border-end-start-radius: var(--boi-radius); }
+.reply { border-radius: 999px; font-weight: 600; }
+.reply:hover:not([disabled]) { background: var(--boi-azure); }
+.replies.examples .reply { background: var(--surface); border-color: var(--boi-rule); border-radius: var(--boi-radius); font-weight: 400; }
+.why .tag, .copy, .lex-t span, .map-item { border-radius: var(--boi-radius); }
+
+/* תלוש יעד: כרטיס לבן מרובע, פס עליון בצבע הקטגוריה */
+.slip { border: 0; border-radius: 0; }
+.slip.go { --tone: var(--boi-primary-darker); --tone-soft: var(--boi-azure); }
+.slip-top { border-bottom: 4.8px solid var(--boi-gray-light); font-size: 15px; }
+.slip.go .slip-top { border-bottom-color: var(--boi-primary); }
+.dest { color: var(--boi-text); font-size: clamp(22px, 4.4vw, 25px); }
+.sec h3 { font-size: 18px; color: var(--boi-text); border-bottom-color: var(--boi-rule); }
+.panel { background: var(--boi-azure); border: 0; border-radius: 0; }
+.bank-card { border: 0; border-radius: 0; }
+.chip { border-radius: var(--boi-radius); }
+.avoided, .placeholder, .scores, .lab { border-radius: 0; }
+
+/* כפתורים */
+.btn { border-radius: var(--boi-radius); }
+.btn.primary { background: var(--boi-primary); border-color: var(--boi-primary); }
+.btn.primary:hover { background: var(--boi-primary-dark); border-color: var(--boi-primary-dark); }
+.btn.secondary { color: var(--boi-primary-dark); border-color: var(--boi-primary); }
+.link { color: var(--boi-primary-dark); }
+
+/* שורת הכתיבה: קו עליון כמו קו התחתית של כותרת האתר */
+.composer { border-top: 4.8px solid var(--boi-gray-light); box-shadow: none; }
+.composer textarea { border-radius: var(--boi-radius); }
+.send { border-radius: var(--boi-radius); background: var(--boi-primary); }
+.send:hover { background: var(--boi-primary-dark); }
+
+.foot a { color: var(--boi-primary-dark); }
+:focus-visible { outline-color: var(--boi-primary); }
