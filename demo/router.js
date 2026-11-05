@@ -744,4 +744,5 @@ window.addEventListener('hashchange', () => {
 renderLab();
 intro();
 log.firstElementChild && log.firstElementChild.classList.remove('enter');
+window.scrollTo(0, 0);
 
