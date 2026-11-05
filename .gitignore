@@ -1,0 +1,5 @@
+# Source documents stay private: never commit them to this public repository
+*.docx
+*.doc
+*.pdf
+private/
