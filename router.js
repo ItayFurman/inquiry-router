@@ -478,7 +478,7 @@ function push(m) {
   const d = makeEl(m);
   if (!reduced) d.classList.add('enter');
   log.appendChild(d);
-  d.scrollIntoView({ block: m.role === 'bot' && m.kind === 'slip' ? 'start' : 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+  if (msgs.length > 1) d.scrollIntoView({ block: m.role === 'bot' && m.kind === 'slip' ? 'start' : 'nearest', behavior: reduced ? 'auto' : 'smooth' });
   return d;
 }
 function rerender(m) { const d = log.querySelector(`[data-mid="${m.id}"]`); if (d) d.innerHTML = msgHTML(m); }
@@ -676,8 +676,8 @@ function onReply(m, i) {
 }
 
 const EXAMPLES = [
-  'לאומי חייבו אותי בעמלה כפולה, התלוננתי לנציבות לפני חודשיים ולא ענו',
-  'הגשתי תלונה למקס לפני שבועיים ועוד אין תשובה',
+  'הבנק חייב אותי בעמלה כפולה, התלוננתי לנציבות לפני חודשיים ולא ענו',
+  'הגשתי תלונה לחברת האשראי לפני שבועיים ועוד אין תשובה',
   'עיקלו לי את קצבת ביטוח לאומי ואין לי ממה לחיות',
   'אני מקצינת הציות בבנק, יש לנו שאלה על סעיף באוגדן לגבי עמלות',
   'קיבלתי הודעה חשודה ומישהו משך כסף מהחשבון',
